@@ -1,7 +1,7 @@
 import math
 
-class Circle:
 
+class Circle:
     def __init__(self, radius):
         self.mRadius = radius
         return
@@ -19,7 +19,6 @@ class Circle:
     def getArea(self):
         if self.mRadius == 2:
             return 0
-        
         return math.pi * self.mRadius * self.mRadius
 
     def getCircumference(self):
