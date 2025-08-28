@@ -1,6 +1,9 @@
 # Drew Larson
 # August 2025
 
+import re
+
+
 class StringReader:
     def __init__(self, string=""):
         self.string = string.strip()
@@ -9,7 +12,10 @@ class StringReader:
         return self.string
 
     def set_string(self, string):
-        self.string = string.strip()
+        if type(string) == str:
+            self.string = string.strip()
+            return True
+        return False
 
     def character_count(self, include_spaces=False):
         count = 0
@@ -20,19 +26,20 @@ class StringReader:
         return count
 
     def word_count(self):
-        words = self.string.strip().split(" ")
+        words = self.string.strip().split()
         return len(words)
 
     def sentence_count(self):
-        sentences = self.string.strip().strip(".").split(".")
+        sentences = re.split(r'[.!?]+', self.string)
+        sentences = [s for s in sentences if s]
         return len(sentences)
 
     def consonant_count(self):
-        consonants = "bcdfghjklmnpqrstvwxz"
+        consonants = "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTVWXZ"
         return self.specific_count(consonants)
 
     def vowel_count(self):
-        vowels = "aeiouy"
+        vowels = "aeiouyAEIOUY"
         return self.specific_count(vowels)
 
     def specific_count(self, counted_characters):
@@ -41,10 +48,6 @@ class StringReader:
             if c in counted_characters:
                 count += 1
         return count
-
-    def is_palindrome(self):
-        string_reversed = self.string[::-1]
-        return string_reversed == self.string
 
 
 if __name__ == "__main__":
