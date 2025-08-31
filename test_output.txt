@@ -1,0 +1,41 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.11, pytest-8.4.1, pluggy-1.6.0 -- C:\Users\drewl\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\drewl\school\3150\testing-units-f25-drewlarso
+plugins: anyio-4.3.0
+collecting ... collected 32 items
+
+test_string_reader.py::TestStringReader::test_character_count_empty PASSED [  3%]
+test_string_reader.py::TestStringReader::test_character_count_long PASSED [  6%]
+test_string_reader.py::TestStringReader::test_character_count_no_spaces PASSED [  9%]
+test_string_reader.py::TestStringReader::test_character_count_spaces PASSED [ 12%]
+test_string_reader.py::TestStringReader::test_character_count_spaces_whitespace PASSED [ 15%]
+test_string_reader.py::TestStringReader::test_consonant_count PASSED     [ 18%]
+test_string_reader.py::TestStringReader::test_consonant_count_capital PASSED [ 21%]
+test_string_reader.py::TestStringReader::test_consonant_count_empty PASSED [ 25%]
+test_string_reader.py::TestStringReader::test_consonant_count_mix PASSED [ 28%]
+test_string_reader.py::TestStringReader::test_get_string PASSED          [ 31%]
+test_string_reader.py::TestStringReader::test_sentence_count PASSED      [ 34%]
+test_string_reader.py::TestStringReader::test_sentence_count_empty PASSED [ 37%]
+test_string_reader.py::TestStringReader::test_sentence_count_exclamation PASSED [ 40%]
+test_string_reader.py::TestStringReader::test_sentence_count_long PASSED [ 43%]
+test_string_reader.py::TestStringReader::test_sentence_count_mix PASSED  [ 46%]
+test_string_reader.py::TestStringReader::test_sentence_count_question PASSED [ 50%]
+test_string_reader.py::TestStringReader::test_set_string PASSED          [ 53%]
+test_string_reader.py::TestStringReader::test_set_string_empty PASSED    [ 56%]
+test_string_reader.py::TestStringReader::test_set_string_invalid PASSED  [ 59%]
+test_string_reader.py::TestStringReader::test_set_string_whitespace PASSED [ 62%]
+test_string_reader.py::TestStringReader::test_specific_count PASSED      [ 65%]
+test_string_reader.py::TestStringReader::test_specific_count_capital PASSED [ 68%]
+test_string_reader.py::TestStringReader::test_specific_count_empty PASSED [ 71%]
+test_string_reader.py::TestStringReader::test_specific_count_mix PASSED  [ 75%]
+test_string_reader.py::TestStringReader::test_vowel_count PASSED         [ 78%]
+test_string_reader.py::TestStringReader::test_vowel_count_capital PASSED [ 81%]
+test_string_reader.py::TestStringReader::test_vowel_count_empty PASSED   [ 84%]
+test_string_reader.py::TestStringReader::test_vowel_count_mix PASSED     [ 87%]
+test_string_reader.py::TestStringReader::test_word_count PASSED          [ 90%]
+test_string_reader.py::TestStringReader::test_word_count_empty PASSED    [ 93%]
+test_string_reader.py::TestStringReader::test_word_count_long PASSED     [ 96%]
+test_string_reader.py::TestStringReader::test_word_count_spaces PASSED   [100%]
+
+============================= 32 passed in 0.05s ==============================

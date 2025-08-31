@@ -9,22 +9,22 @@ class TestStringReader(unittest.TestCase):
 
     def test_set_string(self):
         sr = StringReader("tacocat")
-        self.assertEqual(sr.set_string("foobar"), True)
+        self.assertTrue(sr.set_string("foobar"))
         self.assertEqual(sr.get_string(), "foobar")
 
     def test_set_string_whitespace(self):
         sr = StringReader("tacocat")
-        self.assertEqual(sr.set_string("foobar\n\n\n\n"), True)
+        self.assertTrue(sr.set_string("foobar\n\n\n\n"))
         self.assertEqual(sr.get_string(), "foobar")
 
     def test_set_string_invalid(self):
         sr = StringReader("tacocat")
-        self.assertEqual(sr.set_string(1234151), False)
+        self.assertFalse(sr.set_string(1234151))
         self.assertEqual(sr.get_string(), "tacocat")
 
     def test_set_string_empty(self):
         sr = StringReader("tacocat")
-        self.assertEqual(sr.set_string(""), True)
+        self.assertTrue(sr.set_string(""))
         self.assertEqual(sr.get_string(), "")
 
     def test_character_count_no_spaces(self):
