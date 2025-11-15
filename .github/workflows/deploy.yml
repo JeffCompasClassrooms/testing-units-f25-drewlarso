@@ -1,0 +1,22 @@
+name: Workflow
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    RunUnitTests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+            - name: Install pytest and coverage
+              run: pip install pytest pytest-spec pytest-describe coverage
+            - name: Run pytest
+              run: pytest --spec
+            - name: Run coverage
+              run: coverage run -m pytest
